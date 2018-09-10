@@ -87,7 +87,7 @@ public class OrderManager implements IOrderManager {
             if(order.getOrderInitialQuantity() == 0){// is a cancel order
                 orderBook.cancelOrder(order);
                 isOrderCancelled = true;
-            }else{// is a modify order so add to queue. no need to test buy queue;
+            }else{// is a modify order
                 orderBook.cancelOrder(order);//remove older order
             }
         }
